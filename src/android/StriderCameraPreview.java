@@ -14,7 +14,7 @@
    		limitations under the License.   			
  */
 
-package org.apache.cordova.strider.camera;
+package org.apache.cordova.striderCamera;
 
 import java.io.IOException;
 
