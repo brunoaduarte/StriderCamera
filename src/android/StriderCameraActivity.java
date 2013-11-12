@@ -41,7 +41,7 @@ public class StriderCameraActivity extends Activity {
     private static final String TAG = "StriderCameraActivity";
 
     private Camera mCamera;
-    private ForegroundCameraPreview mPreview;
+    private StriderCameraPreview mPreview;
     private FrameLayout mFrameLayout;
     private boolean pressed = false;
 
@@ -54,7 +54,7 @@ public class StriderCameraActivity extends Activity {
 	mCamera = getCameraInstance();
 
 	// Create a Preview and set it as the content of activity.
-	mPreview = new ForegroundCameraPreview(this, mCamera);
+	mPreview = new StriderCameraPreview(this, mCamera);
 	mFrameLayout = (FrameLayout) findViewById(R.id.camera_preview);
 	mFrameLayout.addView(mPreview);
 
@@ -105,7 +105,7 @@ public class StriderCameraActivity extends Activity {
     protected void onResume() {
 	if (mCamera == null) {
 	    mCamera = getCameraInstance(); //get the camera on resume.
-	    mPreview = new ForegroundCameraPreview(this, mCamera); // Create the preview.
+	    mPreview = new StriderCameraPreview(this, mCamera); // Create the preview.
 	    mFrameLayout.addView(mPreview); //Add the preview to layout.
 	}
 	super.onResume();

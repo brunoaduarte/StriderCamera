@@ -13,15 +13,15 @@
  
     <!-- android -->
     <platform name="android">
+    
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StriderCamera">
                 <param name="android-package" value="plugins.camera.StriderCameraLauncher"/>
             </feature>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <feature name="StriderCamera">
-                <param name="android-package" value="plugins.camera"/>
-            </feature>
+        
+        <config-file target="AndroidManifest.xml" parent="/application">
+            <activity android:label="StriderCamera" android:name="plugins.camera.StriderCameraActivity" android:screenOrientation="landscape" />
         </config-file>
  
         <source-file src="src/android/StriderCameraActivity.java" target-dir="src/plugins/camera" />

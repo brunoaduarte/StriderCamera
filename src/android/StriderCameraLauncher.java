@@ -47,7 +47,7 @@ import android.provider.MediaStore;
  * is closed, the screen displayed before the camera view was shown is
  * redisplayed.
  */
-public class StriderCameraLauncher extends CameraLauncher {
+public class StriderCameraLauncher extends CordovaPlugin {
 
 	private static final String LOG_TAG = "StriderCameraLauncher";
 
