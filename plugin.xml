@@ -14,10 +14,7 @@
     <!-- android -->
     <platform name="android">
     
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:label="@string/app_name" android:name="plugins.camera.StriderCameraActivity" android:screenOrientation="landscape" >
-            </activity>
-        </config-file>
+
     
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StriderCamera">
