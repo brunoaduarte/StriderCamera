@@ -14,7 +14,7 @@
    		limitations under the License.   			
  */
 
-package striderPlugins.camera;
+package plugins.camera;
 
 import java.io.IOException;
 
