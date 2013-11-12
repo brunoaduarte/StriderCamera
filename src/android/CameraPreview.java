@@ -24,12 +24,12 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class StriderCameraPreview extends SurfaceView implements SurfaceHolder.Callback {
+public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
 	private SurfaceHolder mHolder;
 	private Camera mCamera;
-	private static final String TAG = "StriderCameraPreview";
+	private static final String TAG = "CameraPreview";
 
-	public StriderCameraPreview(Context context, Camera camera) {
+	public CameraPreview(Context context, Camera camera) {
 		super(context);
 		mCamera = camera;
 

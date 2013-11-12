@@ -38,25 +38,25 @@ import android.widget.FrameLayout;
 /**
  * Camera Activity Class. Configures Android camera to take picture and show it.
  */
-public class StriderCameraActivity extends Activity {
+public class CameraActivity extends Activity {
 
-	private static final String TAG = "StriderCameraActivity";
+	private static final String TAG = "CameraActivity";
 
 	private Camera mCamera;
-	private StriderCameraPreview mPreview;
+	private CameraPreview mPreview;
 	private FrameLayout mFrameLayout;
 	private boolean pressed = false;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.stridercamera_sv);
+		setContentView(R.layout.camera_sv);
 
 		// Create an instance of Camera
 		mCamera = getCameraInstance();
 
 		// Create a Preview and set it as the content of activity.
-		mPreview = new StriderCameraPreview(this, mCamera);
+		mPreview = new CameraPreview(this, mCamera);
 		mFrameLayout = (FrameLayout) findViewById(R.id.camera_preview);
 		mFrameLayout.addView(mPreview);
 
@@ -107,7 +107,7 @@ public class StriderCameraActivity extends Activity {
 	protected void onResume() {
 		if (mCamera == null) {
 			mCamera = getCameraInstance(); //get the camera on resume.
-			mPreview = new StriderCameraPreview(this, mCamera); // Create the preview.
+			mPreview = new CameraPreview(this, mCamera); // Create the preview.
 			mFrameLayout.addView(mPreview); //Add the preview to layout.
 		}
 		super.onResume();

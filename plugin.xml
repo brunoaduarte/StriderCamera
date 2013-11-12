@@ -24,7 +24,7 @@
     <platform name="android">
     
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:label="@string/app_name" android:name="strider.camera.StriderCameraActivity" android:screenOrientation="landscape" >
+            <activity android:label="@string/app_name" android:name="strider.camera.CameraActivity" android:screenOrientation="landscape" >
             </activity>
         </config-file>
         
@@ -38,7 +38,7 @@
     
         <config-file target="res/xml/config.xml" parent="/widget">
             <feature name="StriderCamera">
-                <param name="android-package" value="strider.camera.StriderCameraLauncher"/>
+                <param name="android-package" value="strider.camera.CameraLauncher"/>
             </feature>
         </config-file>
         
@@ -54,7 +54,7 @@
         <source-file src="src/android/CameraLauncher.java" target-dir="src/strider/camera" />  
         <source-file src="src/android/CameraPreview.java" target-dir="src/strider/camera" />
         
-        <source-file src="src/android/stridercamera_sv.xml" target-dir="res/layout" />
+        <source-file src="src/android/camera_sv.xml" target-dir="res/layout" />
         
      </platform>
      
