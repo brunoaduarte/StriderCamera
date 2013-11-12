@@ -16,7 +16,7 @@
     
 
     
-        <config-file target="res/xml/config.xml" parent="/*">
+        <config-file target="res/xml/config.xml" parent="/widget">
             <feature name="StriderCamera">
                 <param name="android-package" value="plugins.camera.StriderCameraLauncher"/>
             </feature>
