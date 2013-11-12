@@ -22,7 +22,7 @@ for (var key in Camera) {
  * @param {Object} options
  */
 cameraExport.getPicture = function(successCallback, errorCallback, options) {
-	argscheck.checkArgs('fFO', 'Camera.getPicture', arguments);
+	argscheck.checkArgs('fFO', 'StriderCamera.getPicture', arguments);
 	options = options || {};
 	var getValue = argscheck.getValue;
 
@@ -42,12 +42,12 @@ cameraExport.getPicture = function(successCallback, errorCallback, options) {
 	var args = [quality, destinationType, sourceType, targetWidth, targetHeight, encodingType,
 	            mediaType, allowEdit, correctOrientation, saveToPhotoAlbum, popoverOptions, cameraDirection];
 
-	exec(successCallback, errorCallback, "Camera", "takePicture", args);
+	exec(successCallback, errorCallback, "StriderCamera", "takePicture", args);
 	return new CameraPopoverHandle();
 };
 
 cameraExport.cleanup = function(successCallback, errorCallback) {
-	exec(successCallback, errorCallback, "Camera", "cleanup", []);
+	exec(successCallback, errorCallback, "StriderCamera", "cleanup", []);
 };
 
 module.exports = cameraExport;
