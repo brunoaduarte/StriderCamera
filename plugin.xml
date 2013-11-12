@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.strider.app.plugins.camera" version="0.1.0">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="striderPlugins.camera" version="0.1.0">
     <name>StriderCamera</name>
     <description>Strider - Custom Camera for Cordova Phonegap 3.0.1</description>
     <license>Copyright</license>
@@ -14,10 +14,14 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="StriderCamera">
-                <param name="android-package" value="com.strider.app.plugins.camera"/>
+                <param name="android-package" value="striderPlugins.camera"/>
             </feature>
         </config-file>
  
-        <source-file src="src/android/StriderCameraLauncher.java" target-dir="src/com/strider/app/plugins/camera" />      
+        <source-file src="src/android/StriderCameraActivity.java" target-dir="src/striderPlugins/camera" />
+        <source-file src="src/android/StriderCameraLauncher.java" target-dir="src/striderPlugins/camera" />  
+        <source-file src="src/android/StriderCameraPreview.java" target-dir="src/striderPlugins/camera" />
+        
+        <source-file src="src/android/StriderCameraSV.xml" target-dir="res/layout" />
      </platform>          
 </plugin>

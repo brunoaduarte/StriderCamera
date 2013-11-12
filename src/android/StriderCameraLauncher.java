@@ -14,7 +14,7 @@
    		limitations under the License.   			
  */
 
-package com.strider.app.plugins.camera;
+package striderPlugins.camera;
 
 import java.io.File;
 import java.io.FileNotFoundException;

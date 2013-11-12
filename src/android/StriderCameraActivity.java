@@ -14,7 +14,7 @@
    		limitations under the License.   			
  */
 
-package com.strider.app.plugins.camera;
+package striderPlugins.camera;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -48,7 +48,7 @@ public class StriderCameraActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.foregroundcameraplugin);
+	setContentView(R.layout.StriderCameraSV);
 
 	// Create an instance of Camera
 	mCamera = getCameraInstance();
