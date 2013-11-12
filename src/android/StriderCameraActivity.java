@@ -48,7 +48,7 @@ public class StriderCameraActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.StriderCameraSV);
+	setContentView(R.layout.stridercamera_sv);
 
 	// Create an instance of Camera
 	mCamera = getCameraInstance();
