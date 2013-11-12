@@ -7,8 +7,17 @@
     <license>Apache 2.0 License</license>
     <keywords>phonegap,cordova,camera</keywords>
  
-    <js-module src="www/StriderCamera.js" name="StriderCamera">
+    <js-module src="www/Camera.js" name="camera">
         <clobbers target="strider.camera" />
+    </js-module>
+	<js-module src="www/CameraConstants.js" name="Camera">
+        <clobbers target="Camera" />
+    </js-module>
+	<js-module src="www/CameraPopoverOptions.js" name="CameraPopoverOptions">
+        <clobbers target="CameraPopoverOptions" />
+    </js-module>
+	<js-module src="www/CameraPopoverHandle.js" name="CameraPopoverHandle">
+        <clobbers target="CameraPopoverHandle" />
     </js-module>
  
     <!-- android -->
@@ -41,9 +50,9 @@
 		<source-file src="src/android/ExifHelper.java" target-dir="src/strider/camera" />
 		<source-file src="src/android/FileHelper.java" target-dir="src/strider/camera" />
 		
-        <source-file src="src/android/StriderCameraActivity.java" target-dir="src/strider/camera" />
-        <source-file src="src/android/StriderCameraLauncher.java" target-dir="src/strider/camera" />  
-        <source-file src="src/android/StriderCameraPreview.java" target-dir="src/strider/camera" />
+        <source-file src="src/android/CameraActivity.java" target-dir="src/strider/camera" />
+        <source-file src="src/android/CameraLauncher.java" target-dir="src/strider/camera" />  
+        <source-file src="src/android/CameraPreview.java" target-dir="src/strider/camera" />
         
         <source-file src="src/android/stridercamera_sv.xml" target-dir="res/layout" />
         
