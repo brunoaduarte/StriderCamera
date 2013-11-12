@@ -1,4 +1,5 @@
-cordova.define("strider.camera.CameraPopoverOptions", function(require, exports, module) {/*
+//cordova.define("strider.camera.CameraPopoverOptions", function(require, exports, module) {
+/*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -35,4 +36,4 @@ var CameraPopoverOptions = function(x,y,width,height,arrowDir){
 };
 
 module.exports = CameraPopoverOptions;
-});
+//});
