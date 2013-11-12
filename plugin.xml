@@ -32,7 +32,15 @@
                 <param name="android-package" value="strider.camera.StriderCameraLauncher"/>
             </feature>
         </config-file>
+        
+		<config-file target="res/values/strings.xml" parent="/resources">
+        	<string name="lblCapturar">Capture</string>
+    		<string name="lblCancelar">Cancel</string>
+        </config-file>
  
+		<source-file src="src/android/ExifHelper.java" target-dir="src/strider/camera" />
+		<source-file src="src/android/FileHelper.java" target-dir="src/strider/camera" />
+		
         <source-file src="src/android/StriderCameraActivity.java" target-dir="src/strider/camera" />
         <source-file src="src/android/StriderCameraLauncher.java" target-dir="src/strider/camera" />  
         <source-file src="src/android/StriderCameraPreview.java" target-dir="src/strider/camera" />
