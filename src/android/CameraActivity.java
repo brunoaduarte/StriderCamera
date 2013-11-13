@@ -22,6 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import com.example.hello.R;
 
@@ -65,6 +66,16 @@ public class CameraActivity extends Activity {
 		mPreview = new CameraPreview(this, mCamera);
 		mFrameLayout = (FrameLayout) findViewById(R.id.camera_preview);
 		mFrameLayout.addView(mPreview);
+		
+		// get Camera parameters
+		Camera.Parameters params = mCamera.getParameters();
+		List<String> focusModes = params.getSupportedFocusModes();
+
+		if (focusModes.contains(Camera.Parameters.FOCUS_MODE_AUTO))
+			params.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO); 
+
+		// set Camera parameters
+		mCamera.setParameters(params);
 
 		// Add a listener to the Capture button
 		Button captureButton = (Button) findViewById(R.id.button_capture);
