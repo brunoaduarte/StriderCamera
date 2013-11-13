@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
  */
-package strider.camera;
+package io.strider.camera;
 
 import android.database.Cursor;
 import android.net.Uri;

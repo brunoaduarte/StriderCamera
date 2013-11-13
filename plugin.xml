@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
  
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="strider.camera" version="0.1.0">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="io.strider.camera" version="0.1.0">
     <name>StriderCamera</name>
     <description>Strider - Custom Camera for Cordova Phonegap 3.0.1</description>
     <author>Havop - Bruno A. Duarte - November 12, 2013</author>
@@ -8,7 +8,7 @@
     <keywords>phonegap,cordova,camera</keywords>
  
     <js-module src="www/Camera.js" name="camera">
-        <clobbers target="strider.camera" />
+        <clobbers target="io.strider.camera" />
     </js-module>
 	<js-module src="www/CameraConstants.js" name="Camera">
         <clobbers target="Camera" />
@@ -24,7 +24,7 @@
     <platform name="android">
     
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:label="@string/app_name" android:name="strider.camera.CameraActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <activity android:label="@string/app_name" android:name="io.strider.camera.CameraActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             </activity>
         </config-file>
         
@@ -37,7 +37,7 @@
     
         <config-file target="res/xml/config.xml" parent="/widget">
             <feature name="StriderCamera">
-                <param name="android-package" value="strider.camera.CameraLauncher"/>
+                <param name="android-package" value="io.strider.camera.CameraLauncher"/>
             </feature>
         </config-file>
         
@@ -46,12 +46,12 @@
     		<string name="lblCancelar">Cancelar</string>
         </config-file>
  
-		<source-file src="src/android/ExifHelper.java" target-dir="src/strider/camera" />
-		<source-file src="src/android/FileHelper.java" target-dir="src/strider/camera" />
+		<source-file src="src/android/ExifHelper.java" target-dir="src/io/strider/camera" />
+		<source-file src="src/android/FileHelper.java" target-dir="src/io/strider/camera" />
 		
-        <source-file src="src/android/CameraActivity.java" target-dir="src/strider/camera" />
-        <source-file src="src/android/CameraLauncher.java" target-dir="src/strider/camera" />  
-        <source-file src="src/android/CameraPreview.java" target-dir="src/strider/camera" />
+        <source-file src="src/android/CameraActivity.java" target-dir="src/io/strider/camera" />
+        <source-file src="src/android/CameraLauncher.java" target-dir="src/io/strider/camera" />  
+        <source-file src="src/android/CameraPreview.java" target-dir="src/io/strider/camera" />
         
         <source-file src="src/android/camera_sv.xml" target-dir="res/layout" />
         
