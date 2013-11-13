@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="strider.camera" version="0.1.0">
     <name>StriderCamera</name>
     <description>Strider - Custom Camera for Cordova Phonegap 3.0.1</description>
-    <author>Havop - Bruno A. Duarte</author>
+    <author>Havop - Bruno A. Duarte - November 12, 2013</author>
     <license>Apache 2.0 License</license>
     <keywords>phonegap,cordova,camera</keywords>
  
@@ -24,14 +24,13 @@
     <platform name="android">
     
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:label="@string/app_name" android:name="strider.camera.CameraActivity" android:screenOrientation="landscape" >
+            <activity android:label="@string/app_name" android:name="strider.camera.CameraActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             </activity>
         </config-file>
         
 		<config-file target="AndroidManifest.xml" parent="/manifest">
 		    <uses-permission android:name="android.permission.CAMERA" />
 		    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-		    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 		    <uses-feature android:name="android.hardware.camera" />
 		    <uses-feature android:name="android.hardware.camera.autofocus" />
         </config-file>
@@ -43,8 +42,8 @@
         </config-file>
         
 		<config-file target="res/values/strings.xml" parent="/resources">
-        	<string name="lblCapturar">Capture</string>
-    		<string name="lblCancelar">Cancel</string>
+        	<string name="lblCapturar">Capturar</string>
+    		<string name="lblCancelar">Cancelar</string>
         </config-file>
  
 		<source-file src="src/android/ExifHelper.java" target-dir="src/strider/camera" />

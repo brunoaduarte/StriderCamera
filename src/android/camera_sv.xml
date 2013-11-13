@@ -15,35 +15,35 @@
    		limitations under the License. 
 
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:baselineAligned="true"
     android:orientation="horizontal" >
 
     <FrameLayout
         android:id="@+id/camera_preview"
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="0.85" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:text="@string/lblCancelar"
+        android:textSize="25sp" />
 
-        <Button
-            android:id="@+id/button_capture"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/lblCapturar" />
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:text="@string/lblCapturar"
+        android:textSize="25sp" />
 
-        <Button
-            android:id="@+id/button_cancel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/lblCancelar" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
