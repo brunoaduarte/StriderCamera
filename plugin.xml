@@ -8,7 +8,7 @@
     <keywords>phonegap,cordova,camera</keywords>
  
     <js-module src="www/Camera.js" name="camera">
-        <clobbers target="io.strider.camera" />
+        <clobbers target="strider.camera" />
     </js-module>
 	<js-module src="www/CameraConstants.js" name="Camera">
         <clobbers target="Camera" />
