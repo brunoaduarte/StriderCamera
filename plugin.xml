@@ -42,8 +42,10 @@
         </config-file>
         
 		<config-file target="res/values/strings.xml" parent="/resources">
-        	<string name="lblCapturar">Capturar</string>
-    		<string name="lblCancelar">Cancelar</string>
+		    <string name="lblCapture">Capturar</string>
+		    <string name="lblCancel">Cancelar</string>
+		    <string name="lblSave">Salvar</string>
+		    <string name="lblBack">Voltar</string>
         </config-file>
  
 		<source-file src="src/android/ExifHelper.java" target-dir="src/io/strider/camera" />

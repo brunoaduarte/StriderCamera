@@ -23,7 +23,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -42,7 +41,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.Bitmap.CompressFormat;
-import android.hardware.Camera;
 import android.media.MediaScannerConnection;
 import android.media.MediaScannerConnection.MediaScannerConnectionClient;
 import android.net.Uri;
@@ -258,18 +256,6 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
 		// else
 		//     LOG.d(LOG_TAG, "ERROR: You must use the CordovaInterface for this to work correctly. Please implement it in your activity");
 
-	}
-
-	/** A safe way to get an instance of the Camera object. */
-	public static Camera getCameraInstance(){
-		Camera c = null;
-		try {
-			c = Camera.open(); // attempt to get a Camera instance
-		}
-		catch (Exception e){
-			// Camera is not available (in use or does not exist)
-		}
-		return c; // returns null if camera is unavailable
 	}
 
 	/**
