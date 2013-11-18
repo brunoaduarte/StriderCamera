@@ -17,12 +17,16 @@
 package io.strider.camera;
 
 import java.io.IOException;
+import java.util.List;
 
 import android.content.Context;
 import android.hardware.Camera;
+import android.hardware.Camera.Parameters;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
 	private SurfaceHolder mHolder;
@@ -40,8 +44,10 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
 	public void surfaceCreated(SurfaceHolder holder) {
 		try {
+
 			mCamera.setPreviewDisplay(holder);
-			mCamera.startPreview();
+			mCamera.startPreview();	
+			
 		} catch (IOException e) {
 			Log.d(TAG, "Error setting camera preview: " + e.getMessage());
 		}
@@ -55,7 +61,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 		if (mHolder.getSurface() == null) {
 			return;
 		}
-
+		
 		try {
 			mCamera.stopPreview();
 		} catch (Exception e) {
@@ -69,4 +75,36 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 			Log.d(TAG, "Error starting camera preview: " + e.getMessage());
 		}
 	}
+	
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+    	
+    	int idealH, idealW, difH, difW;
+	    float zoom;
+    	
+	    // Adjust surface view size to match camera preview and stretch it to fit screen
+    	if(changed && l == 0 && t == 0) {
+    		
+    		Camera.Size actualPreviewSize = mCamera.getParameters().getPreviewSize();
+    	    
+    	    difW = (r - actualPreviewSize.width);
+    	    difH = (b - actualPreviewSize.height);
+    	    
+    	    if(difW > difH) {
+    	    	zoom = (float) b / actualPreviewSize.height;
+    	    } else {
+    	    	zoom = (float) r / actualPreviewSize.width;
+    	    }
+    	    
+    	    idealH = Math.round(actualPreviewSize.height * zoom);
+    	    idealW = Math.round(actualPreviewSize.width * zoom);
+    	    
+    	    difW = (r - idealW) / 2;
+    	    difH = (b - idealH) / 2;
+    		
+    		this.layout(difW, difH, (idealW + difW), (idealH + difH));
+    		
+    	}
+    	
+    }
 }

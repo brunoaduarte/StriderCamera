@@ -64,6 +64,8 @@ public class CameraActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.camera_sv);
 
@@ -82,7 +84,7 @@ public class CameraActivity extends Activity {
 		List<String> focusModes = params.getSupportedFocusModes();
 
 		if (focusModes.contains(Camera.Parameters.FOCUS_MODE_AUTO))
-			params.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO); 
+			params.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
 
 		// set Camera parameters
 		mCamera.setParameters(params);
@@ -113,6 +115,7 @@ public class CameraActivity extends Activity {
 			public void onClick(View v) {
 
 				writePhotoData();
+				
 				setResult(RESULT_OK);
 				pressed = false;
 				finish();
